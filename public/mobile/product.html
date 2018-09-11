@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="淘淘是中国最大的正品运动鞋、皮鞋网上专卖。经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="买鞋子 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product.css">
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.min.js"></script>
+    <script src="assets/respond.js/respond.min.js"></script>
+    <![end if]-->
+    <title>淘淘-商品详情</title>
+</head>
+<body>
+    <!--后退按钮-->
+    <a href="javascript:history.back();" class="lt_back"></a>
+    <!--商品详细页内容-->
+    <div class="w mui-scroll-wrapper">
+        <div class="mui-scroll clearfix" id="main">
+
+        </div>
+    </div>
+    <footer class="product_footer">
+        <ul>
+            <li class="index"><a href="index.html"><div></div><p>首页</p></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li><a href="javascript:;"></a></li>
+            <li class="join_cart"><a href="javascript:;">加入购物车</a></li>
+            <li class="buy_now"><a href="javascript:;">立即购买</a></li>
+        </ul>
+    </footer>
+</body>
+
+<script type="text/template" id="productDetail">
+    <!--banner区域-->
+    <section class="lt_product_banner clearfix mui-slider">
+        <ul class="mui-slider-group mui-slider-loop">
+            <li class="mui-slider-item"><img src="<%data.pic[0].picArr%>" alt=""></li>
+            <%for(var i=0;i<data.pic.length;i++) {%>
+                <li class="mui-slider-item <%=i==0?'mui-active':''%>"><img src="images/proBig0.jpg" alt=""></li>
+            <%}%>
+            <li class="mui-slider-item"><img src="<%data.pic[data.pic.length-1].picArr%>" alt=""></li>
+        </ul>
+        <ul class="mui-slider-indicator">
+            <%for(var i=0;i<data.pic.length;i++) {%>
+                <li class="mui-indicator <%=i==0?'mui-active':''%>"></li>
+            <%}%>
+        </ul>
+    </section>
+    <!--商品标题-->
+    <h2 class="lt_product_tit"><%=data.proName%></h2>
+    <!--商品价格-->
+    <section class="lt_product_price">
+        <% var num = (data.price/data.oldPrice*10).toString().slice(0,3); %>
+        <span class="fold"><span><%=num%></span>折</span>
+        价格： <span class="price">¥</span><span class="present"><%=data.price%></span><del>¥<%=data.oldPrice%></del></section>
+    <!--商品选项-->
+    <section class="lt_product_item">
+        <div class="size">
+            尺码：
+            <%
+                var arr = data.size.split('-');
+                var start = arr[0];
+                var end = arr[1];
+                for(var i=start;i<=end;i++) {
+            %>
+                <span class="<%=i==start?'active':''%>"><%=i%></span>
+            <%}%>
+        </div>
+        <!--数量-->
+        <div class="pro_num">
+            数量：
+            <div class="mui-numbox" data-numbox-min='0' data-numbox-max="<%=data.num%>">
+                <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                <input class="mui-numbox-input" type="number" value="1"/>
+                <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+            </div>
+            <span>剩余数量：<%=data.num%>双</span>
+        </div>
+
+    </section>
+    <!--商品详情-->
+    <section class="lt_product_detail">
+        <%=data.proDesc%>
+    </section>
+</script>
+
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="js/common.js"></script>
+<script src="js/product.js"></script>
+</html>

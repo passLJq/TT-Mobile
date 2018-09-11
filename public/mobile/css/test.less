@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@adapterList:320px,360px,375px,384px,400px,414px,424px,480px,540px,640px;
+
+@len:length(@adapterList);
+
+@baseWidth:50px;
+
+@psdWidth:640px;
+
+.aa(@index) when (@index <= @len){
+  @media (min-width: extract(@adapterList,@index)) {
+    html {
+      font-size: @baseWidth / @psdWidth * extract(@adapterList,@index);
+    }
+  }
+  .aa(@index+1);
+}
+
+.aa(1);

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="中国最大的正品运动鞋、皮鞋网上专卖。经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="买鞋子 上淘淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+    <!--[if lt IE 9]>
+        <script src="assets/html5shiv/html5shiv.min.js"></script>
+        <script src="assets/respond.js/respond.min.js"></script>
+    <![end if]-->
+    <title>淘淘-分类</title>
+</head>
+<body>
+    <header class="lt_header lt_header_search">
+        <a href="javascript:history.back();" class="lt_header_back lt-icon lt-icon-back"></a>
+        <form action="#">
+            <input type="search" placeholder="搜索商品" class="">
+            <a href="#" class="lt-icon lt-icon-search searchBtn"></a>
+        </form>
+        <a href="javascript:;" class="lt_header_searchBtn searchBtn">搜索</a>
+    </header>
+
+    <!--底部页签-->
+    <div class="lt_footer_nav">
+        <ul>
+            <li><a href="index.html"><div><img src="images/foot0.png" alt=""></div><p>首页</p></a></li>
+            <li><a href="category.html"><div><img src="images/foot1.png" alt=""></div><p>分类</p></a></li>
+            <li><a href="user/cart.html"><div><img src="images/foot2.png" alt=""></div><p>购物车</p></a></li>
+            <li><a href="user/index.html"><div><img src="images/foot3.png" alt=""></div><p>会员中心</p></a></li>
+        </ul>
+    </div>
+
+    <!--主体内容-->
+    <div class="main ">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll clearfix">
+
+                <section class="lt_cate_left">
+                    <ul class="clearfix">
+
+                    </ul>
+                </section>
+                <section class="lt_cate_right">
+                    <ul class="clearfix">
+
+                        <li><a href="#"><img src="images/brand1.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/brand1.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/brand1.png" alt=""></a></li>
+
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/template" id="firstCate">
+    <% for(var i = 0 ; i < rows.length ; i ++){ %>
+    <li data-id="<%=rows[i].id%>" class="<%=i==0?'active':'' %>"><%=rows[i].categoryName%></li>
+    <% } %>
+</script>
+<script type="text/template" id="secondCate">
+    <% for(var i = 0 ; i < rows.length ; i ++){ %>
+    <li><a href="#"><img src="<%=rows[i].brandLogo%>" alt=""></a></li>
+    <% } %>
+</script>
+
+<script src="assets/mui/js/mui.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="assets/zepto/zepto.min.js"></script>
+<script src="js/category.js"></script>
+
+
+<script type="text/template" id="lt_cate_right"></script>
+</html>

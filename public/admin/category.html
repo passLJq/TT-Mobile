@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/bootstrap-validator/css/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" href="assets/nprogress/nprogress.css"/>
+    <link rel="stylesheet" href="css/admin.css"/>
+    <title>后台管理系统-首页</title>
+</head>
+<style>
+    [name="pic1"] {
+        opacity: 0;
+        display: inline-block;
+    }
+    [type="hidden"] {
+        position: absolute;
+    }
+    label.btn {
+        position: absolute;
+        margin-top: -10px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+</style>
+<body>
+<!--侧边栏-->
+<div class="index_slide">
+    <a href="index.html" class="brand">LeTao</a>
+    <div class="user">
+        <img src="images/default.png" alt="">
+        <span class="userName">XXX</span>
+    </div>
+    <ul class="list">
+        <li><a href="index.html"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+        <li class="now">
+            <a href="javascript:;">
+                <i class="glyphicon glyphicon-th-list"></i>
+                分类管理
+            </a>
+            <div class="child">
+                <a href="category.html" class="first">一级分类</a>
+                <a href="categorySecond.html" class="second">二级分类</a>
+            </div>
+        </li>
+        <li><a href="productManage.html"><i class="glyphicon glyphicon-piggy-bank"></i>商品管理</a></li>
+    </ul>
+</div>
+<!--顶部栏-->
+<nav class="topBar">
+    <a href="javascript:;" class="fl"><i class="glyphicon glyphicon-align-justify"></i></a>
+    <a href="javascript:;" class="fr"  data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-log-out"></i></a>
+</nav>
+<!--主体内容-->
+<section class="main">
+    <section class="index_main">
+        <!--路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="#">管理系统</a></li>
+            <li>分类管理</li>
+            <li class="active">二级分类</li>
+        </ol>
+    </section>
+    <div class="col-sm-12">
+        <button class="btn btn-default btn-md mud-15"   data-toggle="modal" data-target="#addTopCate">添加分类</button>
+        <table class="table table-bordered table-hover text-center">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>一级分类名称</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <!--分页-->
+        <nav class="text-right">
+            <ul class="pagination">
+
+            </ul>
+        </nav>
+    </div>
+</section>
+<!--模态框-->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                是否确定退出登录
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button id="logout" type="button" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--添加一级分类的模态框-->
+<div class="modal fade" id="addTopCate">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加一级分类</h4>
+            </div>
+            <div class="modal-body">
+                <form action="#" id="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入一级分类名" name="categoryName">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button id="btnAdd" type="submit" form="form" class="btn btn-primary">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--一级分类数据-->
+<script type="text/template" id="firstData">
+    <%for(var i=0;i<rows.length;i++) {%>
+        <tr>
+            <th>
+                <%=(page-1)*size+i+1%>
+            </th>
+            <td>
+                <%=rows[i].categoryName%>
+            </td>
+        </tr>
+    <%}%>
+</script>
+
+
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/artTemplate/template-native.js"></script>
+<script src="assets/nprogress/nprogress.js"></script>
+<!--表单校验插件-->
+<script src="assets/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<!--分页插件-->
+<script src="assets/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+
+<script src="js/admin.js"></script>
+<script src="js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@charset "utf-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 28.125px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 29.296875px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 30px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 31.25px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 32.34375px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 33.125px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 37.5px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 42.1875px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 50px;
+  }
+}

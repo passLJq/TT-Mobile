@@ -1,0 +1,153 @@
+
+.lt_header {
+    height: 40px;
+    font-size: 0.48rem;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 1.6rem;
+}
+
+.lt_insearch {
+    width: 100%;
+    height: 32px;
+    background-color: #fff;
+    margin: 5px 0 3px;
+    padding: 0 5px;
+}
+.lt_insearch form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #e6002d;
+    border-radius: 0 3px 3px 0;
+}
+.lt_insearch form span {
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    color: #666;
+    font-size: 16px;
+}
+.lt_insearch form input{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 0 30px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 0.44rem;
+    line-height: 30px;
+}
+.lt_insearch form .btn{
+    width: 60px;
+    height: 100%;
+    border: 1px solid #e6002d;
+    border-radius: 0 2px 2px 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e6002d;
+    color: #fff;
+    font-size: .55rem;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*排序*/
+.lt_order {
+    width: 100%;
+    background-color: #f3f3f3;
+}
+.lt_order ul {
+    width: 100%;
+}
+.lt_order ul li {
+    width: 25%;
+    float: left;
+    text-align: center;
+
+}
+.lt_order ul li a {
+    display: block;
+    border-right: 1px solid #ccc;
+    width: 100%;
+    height: 22px;
+    margin: 9px 0;
+    line-height: 22px;
+    font-size: 0.44rem;
+    color: #333;
+}
+.lt_order ul li a.now {
+    color: #68ca51;
+}
+
+/*搜索商品展示*/
+.lt_search_pro {
+    width: 100%;
+    position: relative;
+}
+.lt_search_pro ul {
+    width: 100%;
+    height: 100%;
+}
+.lt_search_pro ul li {
+    width: 50%;
+    float: left;
+    padding: 10px 6px 0;
+    position: relative;
+    margin-top: 10px;
+}
+.lt_search_pro ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-shadow: 4px 4px 4px #ccc;
+}
+.lt_search_pro ul li a img{
+    width: 100%;
+    display: block;
+}
+.lt_search_pro ul li a p {
+    font-size: 0.48rem;
+    width: 160px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.lt_search_pro ul li a p:last-child {
+    font-size: 0.377rem;
+    margin-top: 0.1rem;
+}
+.lt_search_pro ul li a div {
+    color: #000;
+    font-size: 0.377rem;
+}
+
+.lt_search_pro ul li a div strong{
+    font-size: 0.5rem;
+}
+.lt_search_pro ul li a div del{
+    color: #888;
+}
+.lt_search_pro .cart {
+    width: 0.96rem;
+    height: 0.96rem;
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.2rem;
+    border-radius: 50%;
+    background: #e6002d url("../images/car_icon.png") no-repeat center center / contain;
+}
+
+/*修改下拉刷新的动画位置高度问题*/
+.mui-pull-top-pocket {
+    top: 40px;
+}

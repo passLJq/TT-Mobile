@@ -1,0 +1,193 @@
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 75px 0 1.6rem 0;
+}
+/*首页分页栏*/
+.lt_nav {
+    width: 100%;
+    height: 35px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    top: 40px;
+    z-index: 999;
+}
+.lt_nav ul {
+    width: 100%;
+    height: 100%;
+}
+.lt_nav ul li {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.lt_nav ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    color: #333;
+    line-height: 35px;
+    font-size: 0.46rem;
+}
+
+/*首页轮播图*/
+.lt_banner {
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.lt_banner ul:first-child {
+    width: 600%;
+}
+.lt_banner ul:first-child li {
+    width: 16.66666%!important;
+    float: left;
+}
+.lt_banner ul:first-child li a {
+    width: 100%;
+    display: block;
+}
+.lt_banner ul:first-child li a img {
+    width: 100%;
+    display: block;
+}
+.main .lt_banner ul:last-child {
+    position: absolute;
+    bottom: 5px;
+    width: 84px;
+    height: 9px;
+    left: 50%;
+    margin-left: -42px;
+}
+.main .lt_banner ul:last-child li {
+    width: 9px;
+    height: 9px;
+    background-color: #eaeaea;
+    margin: 0 6px;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.main .lt_banner ul:last-child li.mui-active {
+    background-color: #f2972c;
+}
+/*首页内部搜索栏*/
+.lt_insearch {
+    width: 100%;
+    height: 32px;
+    background-color: #fff;
+    margin: 5px 0 3px;
+    padding: 0 5px;
+}
+.lt_insearch form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #e6002d;
+    border-radius: 0 3px 3px 0;
+}
+.lt_insearch form span {
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    color: #666;
+    font-size: 16px;
+}
+.lt_insearch form input{
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 0 30px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 0.44rem;
+    line-height: 30px;
+}
+.lt_insearch form .btn{
+    width: 60px;
+    height: 100%;
+    border: 1px solid #e6002d;
+    border-radius: 0 2px 2px 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e6002d;
+    color: #fff;
+    font-size: .55rem;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*分类栏*/
+.lt_cate {
+    width: 100%;
+}
+.lt_cate ul {
+    width: 100%;
+}
+.lt_cate ul li {
+    width: 25%;
+    float: left;
+}
+.lt_cate ul li a {
+    width: 100%;
+    display: block;
+}
+.lt_cate ul li a img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/*人气推荐*/
+.lt_hot {
+    width: 100%;
+}
+.lt_hot .lt_hot_tit {
+    width: 100%;
+}
+.lt_hot img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.lt_hot .lt_hot_pro {
+    width: 100%;
+}
+.lt_hot .lt_hot_pro div {
+    width: 50%;
+    float: left;
+}
+
+.lt_hot .lt_hot_more {
+    width: 100%;
+}
+
+/*产品板块*/
+.lt_product {
+    width: 100%;
+}
+.lt_product ul {
+    width: 100%;
+}
+.lt_product ul li{
+    width: 50%;
+    float: left;
+}
+.lt_product ul li a {
+    width: 100%;
+    display: block;
+}
+.lt_product ul li a img{
+    width: 100%;
+    display: block;
+}
